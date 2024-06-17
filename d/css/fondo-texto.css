@@ -1,0 +1,163 @@
+header
+{
+    width: calc(100% + 12px);
+    background-color: #000;
+}
+.pe
+{
+    background: linear-gradient(#1497be, #1c2aec);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    animation: text 5s linear infinite;
+}
+
+@keyframes text{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.margen
+{
+    margin-left: 400px;
+}
+.main
+{
+    background-color: aquamarine;
+}
+.body{
+    background-color: light;
+}
+
+.bo:after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(120deg, #79fb00, #8d01a0, #031ba5, #ff004c,
+    #e6036d, #fb0094, #ff6600, #04c2e4, #adad02, #00c3ff);
+    background-size: 200%;
+    width: calc(100% + 12px);
+    height: calc( 5px);
+    z-index: -1;
+    animation: color 15s ease infinite;
+}
+@keyframes color{
+    0%{
+        background-position: 0% 200%;
+    }
+    50%
+    {
+        background-position: 200% 0%;
+    }
+    100%{
+        background-position: 0% 330%;
+    }
+}
+
+.bo::after{
+    filter: brightness(1.4);
+    filter: drop-shadow(1px 1px 1px rgb(248, 220, 97));
+    filter: blur(1px);
+}
+.espacio{
+    margin-top: 10px; 
+    margin-left: 5px; 
+}
+.camina
+{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    animation: correr 10s linear infinite;
+}
+.camina:hover{
+    animation-play-state: paused;
+}
+@keyframes correr
+{
+    0%{
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(1500px);
+
+    }
+    
+}
+.con
+{
+    text-decoration: #fb0094;
+    width: 40px;
+    height: 40px;
+    animation: con 10s linear infinite;
+}
+.con:hover{
+    animation-play-state: paused;
+}
+@keyframes con
+{
+    0%{
+        transform: translateX(1400px);
+    }
+    100%
+    {
+        transform: translateX(0px);
+
+    }
+    
+}
+
+figure.zoom
+{
+ 
+    display: flex;
+    overflow: hidden;
+    transition: all 500ms ease;
+    border-radius: 5px;
+    box-shadow: 1px 10px 15px rgba(0,0,0,0.50);
+}
+figure.zoom  img{
+    height: auto;
+    width: 100%;
+    transition: all 500ms ease;
+}
+figure.zoom img:hover{
+    transform: scale(1.2);
+}
+
+figure.zoomca
+{
+ 
+    display: flex;
+    overflow: hidden;
+    transition: all 500ms ease;
+    border-radius: 8px;
+    box-shadow: 1px 10px 15px rgba(0,0,0,0.50);
+}
+figure.zoomca  .ma{
+    height: 400px;
+    width: 100%;
+    transition: all 500ms ease;
+}
+figure.zoomca img:hover{
+    transform: scale(1.2);
+}
+
+.borde
+{
+    box-shadow: 1px 10px 15px rgba(0,0,0,0.50);
+}
+
+.footer
+{
+    background-color: #000;
+}
+.back{
+    background-color: rgb(0, 0, 0);
+}

@@ -1,0 +1,85 @@
+.modal-title{
+    margin-left: 28%;
+}
+
+.form-group{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px ;
+    font-weight: bold;
+    color: #000000;
+}
+
+#form-control{
+    box-shadow: rgba(70, 44, 215, 0.25) 0px 2px 5px -1px, rgba(61, 13, 134, 0.3) 0px 1px 3px -1px;
+}
+
+#modal-content{
+    margin-top: 12%;
+}
+
+.modal-header{
+    background-color: rgb(61, 22, 202);
+    color: #ffffff;
+}
+
+.form-label{
+    color: rgb(61, 22, 202);
+    margin-top: 5px;
+}
+
+.btn-cancelar{
+    border-color: rgb(61, 22, 202) !important;
+}
+
+.btn-cancelar:hover{
+    background-color: rgb(61, 22, 202) !important;
+    color: #fff !important;
+}
+
+.btn-guardar{
+    background-color: rgb(133, 108, 223) !important;
+    color: #fff;
+}
+
+.btn-guardar:hover{
+    background-color: rgb(61, 22, 202) !important;
+    color: #fff;
+}
+
+.file-select {
+    position: relative;
+    display: inline-block;
+  }
+  
+.file-select::before {
+    background-color: #230971;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    content: 'Seleccionar'; /* testo por defecto */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+.file-select input[type="file"] {
+    opacity: 0;
+    width: 230px;
+    height: 32px;
+    display: inline-block;
+    border-radius: 24px;
+}
+
+:root {
+    --fn: 'SELECCIONA LA IMAGEN';
+}
+    
+.file-select::before {
+    white-space:normal;
+    content: var(--fn);
+}
+

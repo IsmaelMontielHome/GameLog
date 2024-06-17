@@ -1,0 +1,15 @@
+h4{
+    color:rgb(237, 221, 0);
+    margin-left: 40%;
+    font-weight: 700;
+    
+}
+.modal-content{
+    border-width: 9px;
+    border-color: rgb(255, 234, 0);
+    background-color: black;
+}
+
+.close{
+    color: rgba(255, 234, 0, 0.853);
+}

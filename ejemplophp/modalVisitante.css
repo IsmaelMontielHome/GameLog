@@ -1,0 +1,15 @@
+h4{
+    color:#8cadd8;
+    margin-left: 40%;
+    font-weight: 700;
+    
+}
+.modal-content{
+    border-width: 5px;
+    border-color: #8cadd8;
+    background-color: #030225;
+}
+
+.close, .close:hover{
+    color: #bfc9d6;
+}

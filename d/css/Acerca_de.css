@@ -1,0 +1,425 @@
+
+:root{
+    --bg-color: #0e0d0d;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*caja con borde curvo*/
+.wrp{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+.portada{
+    width: 100%;
+    height: 100%;
+    background: url("../img/MarioBros.jpg");
+    background-attachment: fixed;
+}
+.co{
+    top:0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,11,0.6);
+}
+.co .info{
+    width: 100%;
+    max-width: 750px;
+    text-align: center;
+}
+.co .info a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 10px 25px;
+    color: #fff;
+    background: #4897c3;
+    border-radius: 50px;
+    margin-bottom: 40px;
+    border: 2px solid transparent;
+    transition: all 30ms ease;
+}
+.co .info h1{
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+.co .info a:hover{
+    background: transparent;
+    border: 2px solid #fff;
+}
+
+.curveado{
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+}
+.curveado img{
+    width:100%
+    var(--bg-color)
+}
+@media (max-width:786px) {
+    .contenido .info h1{
+        font-size: 35px;
+    }
+}
+
+
+/*Caja de perfil*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card {
+    position: relative;
+    width: 370px;
+    height: 190px;
+    background: var(--bg-color);
+    transition: 0.5s;
+    margin-bottom: 70px; /* Agrega espacio inferior entre las tarjetas */
+}
+
+@media (max-width: 600px) {
+    .cont {
+        justify-content: center; /* Centra las tarjetas en pantallas más pequeñas */
+    }
+
+    .card {
+        width: 100%; /* Ajusta el ancho de las tarjetas al 100% en pantallas más pequeñas */
+        margin: 0 0 70px 0; /* Agrega espacio inferior y cero margen en los lados */
+    }
+}
+.card:hover{
+    height: 470px;
+}
+
+.card .lines{
+    position: absolute;
+    inset: 0;
+    background: #000;
+    overflow: hidden;
+}
+.card .lines::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(transparent, #45f3ff,#45f3ff,#45f3ff,transparent);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform:  translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+.card .lines::after{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+/*caja de perfil_pequeña*/
+
+.card .imgBx{
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #000;
+    transition: 0.5s;
+    z-index: 10;
+    overflow: hidden;
+}
+.card:hover .imgBx{
+    width: 250px;
+    height: 250px;
+}
+.card .imgBx::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(transparent, #ff3c7f,#ff3c7f,#ff3c7f,transparent);
+    animation: animate2 6s linear infinite;
+}
+@keyframes animate2{
+    0%{
+        transform:  translate(-50%,-50%) rotate(360deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+}
+.card .imgBx::after{
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+
+.card .imgBx img{
+    position: absolute;
+    top: 10px;
+    left:10px ;
+    z-index: 1;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    filter: grayscale(1);
+}
+
+.card .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.card .content .datails{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(145px);
+}
+.card:hover .content .datails{
+    transform: translateY(0px);
+
+}
+.card .content .datails h2{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #45f3ff;
+    line-height: 1.2em;
+}
+.card .content .datails h2 span{
+    font-size: 0.75em;
+    font-weight: 500;
+    color: #fff;
+}
+.card .content .datails .data{
+     display: flex;
+     justify-content: space-between;
+     margin: 20px 0;
+}
+.card .content .datails .data h3{
+    font-size: 1em;
+    color: #45f3ff;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+.card .content .datails .data h3 span{
+    font-size: 0.85em;
+    font-weight: 400;
+    color: #fff;
+}
+.card .content .datails .actionBtn{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.card .content .datails .actionBtn a .facebook {
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 200;
+    background: #45f3ff;
+    color: #222;
+    cursor: pointer;
+}
+.card .content .datails .actionBtn a .instagram {
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 200;
+    background: #ff3c7f;
+    color: #222;
+    cursor: pointer;
+}
+.card .content .datails .actionBtn a .Github {
+    padding: 10px 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 200;
+    background: #000000;
+    color: #fffbfb;
+    cursor: pointer;
+}
+
+
+/*caja donde mantiene a las demas cajas*/
+.cont{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+  
+  }
+
+/*caja para poner los texto de las imagenes*/
+
+.cont1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    background: #4897c3;
+  
+  }
+  
+  /* Estilos para el lado izquierdo con texto */
+  .text{
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Estilos para el lado derecho con imagen */
+  .image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Estilos para la imagen */
+  .image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Estilos para hacerlo responsive */
+  @media (max-width: 500px) {
+    .container1 {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .text, .image {
+      flex: none;
+      width: 100%;
+    }
+  }
+
+
+  .modal{
+    top: 0;
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    background: #17181c62;
+  }
+  
+  button#modalBtn{
+    padding: 8px 15px;
+    background-color: #505562;
+    color: #fff;
+    font-size: 25px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  .modal.active{
+    display: flex;
+  }
+  
+  .modal-content{
+    background: #17181c;
+    color: #fff;
+    width: 500px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0.75em 1em #0b0c0e4d;
+    border-radius: 1em;
+  }
+  .modal-content::before{
+    background-color: #0a158fb0;
+    border-radius: 50%;
+    content: '';
+    filter: blur(60px);
+    opacity: .15;
+    position: absolute;
+    top: -8px;
+    right: -15em;
+    width: 25em;
+    height: 25em;
+    z-index: 0;
+    transition: background-color .3s;
+  }
+  
+  .closeIcon{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: #abafba;
+    transition: .3s;
+    font-size: 20px;
+  }
+  .closeIcon:hover{
+    color: #fff;
+  }
+  .modal-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+  }
+  span.icon{
+    font-size: 50px;
+    color: #0a158fb0;
+  }
+  .right-items{
+    margin-left: 30px;
+  }
+  a#okBtn{
+    padding: 8px 15px;
+    font-size: 18px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #0a158fb0;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 28px;
+  }
+  
+  a#okBtn:hover{
+    background: #abafba;
+  }
